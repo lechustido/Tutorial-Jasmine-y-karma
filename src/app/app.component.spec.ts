@@ -32,4 +32,11 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to Tutorial-Jasmin-y-Karma!');
   });
+
+  it('El método debe sumar 2 números y estos deben ser mayores a 4', async () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const app = fixture.componentInstance;
+    expect(app.sumatorioNumeros(2, 4)).toBeGreaterThan(4);
+  });
 });

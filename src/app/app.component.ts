@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tutorial-Jasmin-y-Karma';
+
+  public sumatorioNumeros(num1, num2): number {
+    return num1 + num2;
+  }
 }
