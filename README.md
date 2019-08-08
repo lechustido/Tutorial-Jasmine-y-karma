@@ -1,4 +1,4 @@
-# TutorialJasminYKarma
+# Tutorial Jasmin Y Karma
 ## Objetivo
 
 El objetivo de este proyecto es iniciar a los programadores Angular en el mundo de las pruebas unitarias. Para realizar
