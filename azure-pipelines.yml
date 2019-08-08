@@ -20,8 +20,7 @@ steps:
     npm install
     ng build --prod
   displayName: 'npm install and build'
-- task: Npm@0
-  inputs:
-    command: 'custom'
-    workingDir: '.'
-    customCommand: 'npm test'
+- script: |
+   ng test
+  displayName: 'test unitarios'
+
