@@ -18,6 +18,7 @@ steps:
 - script: |
     npm install -g @angular/cli
     npm install
+    npm install chromedriver
     ng build --prod
     ng test
   displayName: 'npm install and build'
