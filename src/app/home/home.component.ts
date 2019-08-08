@@ -16,9 +16,13 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.servicioHome.getAll().subscribe(
       (resp) => {
-        console.log(resp);
+        // console.log(resp);
       }
     );
+  }
+
+  demuestroNoTodoValidado() {
+    return 'Esto no lo estoy validando';
   }
 
 }

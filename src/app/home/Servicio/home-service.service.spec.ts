@@ -10,8 +10,7 @@ describe('HomeServiceService', () => {
   beforeEach(
     () => {
       TestBed.configureTestingModule({
-        imports: [HttpClientTestingModule] 
-
+        imports: [HttpClientTestingModule],
       });
       injector = getTestBed();
       httpMock = injector.get(HttpTestingController);
@@ -77,12 +76,8 @@ describe('HomeServiceService', () => {
         expect(users[0].login).toBeDefined();
       }
     );
-
     const req = httpMock.expectOne('https://api.github.com/users');
     expect(req.request.method).toBe('GET');
-    console.log(req);
     req.flush(mockUsers);
-    // expect(service).toBeTruthy();
-
   });
 });

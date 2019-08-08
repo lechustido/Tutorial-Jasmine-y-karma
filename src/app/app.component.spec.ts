@@ -3,6 +3,10 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  beforeAll(() => {
+    console.log('beforeAll');
+  });
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -12,7 +16,12 @@ describe('AppComponent', () => {
         AppComponent
       ],
     }).compileComponents();
+    console.log('beforeEach');
   }));
+
+  afterEach(() => {
+    console.log('afterEach');
+  });
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
@@ -38,5 +47,9 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const app = fixture.componentInstance;
     expect(app.sumatorioNumeros(2, 4)).toBeGreaterThan(4);
+  });
+
+  afterAll(() => {
+    console.log('Afterall');
   });
 });
